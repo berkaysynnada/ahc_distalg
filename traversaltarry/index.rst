@@ -3,18 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. include:: docs/distalgname/substitutions.rst
+.. include:: docs/traversaltarry/substitutions.rst
 
-|DistAlgName|
+|traversaltarry|
 =======================================================================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents
 
-   docs/distalgname/distalgname
+   docs/traversaltarry/traversaltarry
    docs/rubric
-   docs/distalgname/code
+   docs/traversaltarry/code
 
 .. ATTENTION::
    For RST details, please refer to `reStructuredText Documentation <https://docutils.sourceforge.io/rst.html>`_.
