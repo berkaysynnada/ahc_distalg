@@ -1,2 +1,2 @@
-.. |traversaltarry| replace:: Distributed Algorithm Name 
+.. |traversaltarry| replace:: Wave Traversal: Tarry’s Algorithm
 

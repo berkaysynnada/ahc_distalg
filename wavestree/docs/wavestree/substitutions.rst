@@ -1,2 +1,2 @@
-.. |wavestree| replace:: Distributed Algorithm Name 
+.. |wavestree| replace:: Waves: Tree Algorithm
 
