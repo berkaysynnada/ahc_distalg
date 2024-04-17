@@ -1,7 +1,7 @@
 """
 Distributed Snapshot Algorithms
 
-This module implemenTAKESNAPSHOT Chandy Lamport and Lai Yang algorithms.
+This module implement Waves Tree algorithm.
 """
 
 

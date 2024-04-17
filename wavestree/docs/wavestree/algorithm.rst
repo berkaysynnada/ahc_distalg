@@ -54,9 +54,14 @@ Imagine a network where Node A initiates the wave. It sends wave messages to its
 
 **Correctness:**
 
-*Termination*: The algorithm guarantees that wave propagation will terminate, as each node propagates the wave only once, and loops are prevented, ensuring finite steps for wave propagation across the network.
+*Termination (Liveness)*: The Waves Tree Algorithm guarantees termination due to its design ensuring each node propagates the wave message exactly once. Initially, one or more nodes start the wave propagation by sending messages to their immediate neighbors. As each node receives a wave message, it marks itself as visited and forwards the wave only to unvisited neighbors. This mechanism ensures that no node sends the wave message more than once, thus, every node eventually stops sending messages. The network's connectivity guarantees that all nodes will receive the wave message, ensuring the spanning tree is completed and the algorithm terminates.
 
-*Spanning Tree Construction*: The algorithm ensures the construction of a valid spanning tree, as each node identifies a single parent, preventing cycles, and every node is reached, ensuring connectivity.
+*Safety*: Safety in the Waves Tree Algorithm is maintained by preventing the formation of loops and ensuring that no node is included more than once in the spanning tree. This is achieved through:
+
+- Unique Parent Selection: Each node that receives a wave message for the first time acknowledges only the first sender as its parent in the spanning tree, which prevents multiple paths to the same node in the tree and avoids cycle formation.
+- Visited Marking: Each node marks itself as visited once it processes the first received wave message and does not accept any further wave messages for propagation. This mechanism ensures that no node acts on outdated or redundant information, which could lead to loops or multiple entries for a node in the tree.
+
+*Correctness*: To ensure the correctness of the Waves Tree Algorithm, we need to verify that the resulting spanning tree includes all nodes and contains no cycles. Each node in the network receives a wave message from exactly one parent, which it acknowledges as its entry into the spanning tree. This parent-child relationship prevents cycles since each node records only one incoming link from the tree and does not resend the wave back to the sender. Furthermore, because the messages are sent to every unvisited neighbor and each node becomes visited only once, every node in the network is eventually reached and included in the spanning tree. This structure confirms that the algorithm constructs a feasible and complete spanning tree as intended.
 
 
 **Complexity**:

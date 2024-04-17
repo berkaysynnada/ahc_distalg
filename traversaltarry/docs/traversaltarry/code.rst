@@ -6,5 +6,4 @@ Code Documentation
    :recursive:
 
    Snapshot.Snapshot
-   Snapshot.ChandyLamportSnapshot
-   Snapshot.LaiYangSnapshot
+   Snapshot.TraversalTarry

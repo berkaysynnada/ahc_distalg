@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.abspath('.'))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Distributed Algorithm on AHCv2: wavestree'
+project = 'Distributed Algorithm on AHCv2: Waves: Tree Algorithm'
 copyright = '2024, Berkay Sahin'
 author = 'Berkay Sahin'
 release = 'V1.0.0'
