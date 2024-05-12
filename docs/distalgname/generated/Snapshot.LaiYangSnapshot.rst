@@ -1,7 +1,7 @@
-﻿Waves.Tree
+﻿Snapshot.LaiYangSnapshot
 ========================
 
-.. automodule:: Waves.Tree
+.. automodule:: Snapshot.LaiYangSnapshot
 
    
    
@@ -17,10 +17,10 @@
 
    .. autosummary::
    
-   .. autoclass:: TreeComponentModel
+   .. autoclass:: LaiYangComponentModel
       :members:
       :undoc-members:
-   .. autoclass:: TreeState
+   .. autoclass:: LaiYangState
       :members:
       :undoc-members:
    

@@ -4,7 +4,7 @@ from adhoccomputing.Experimentation.Topology import Topology
 from adhoccomputing.GenericModel import GenericModel, GenericMessageHeader, GenericMessagePayload, GenericMessage
 from adhoccomputing.Generics import *
 from collections import defaultdict
-from Waves.Snapshot import SnapshotComponentModel, SnapshotMessageTypes, SnapshotEventTypes
+from Snapshot.Snapshot import SnapshotComponentModel, SnapshotMessageTypes, SnapshotEventTypes
 
 
 class LaiYangState:

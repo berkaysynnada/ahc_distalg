@@ -8,8 +8,8 @@ from adhoccomputing.Generics import *
 from adhoccomputing.Experimentation.Topology import Topology
 from adhoccomputing.Networking.LogicalChannels.GenericChannel import GenericChannel
 
-from Waves.ChandyLamportSnapshot import ChandyLamportComponentModel
-from Waves.Snapshot import SnapshotEventTypes
+from Snapshot.ChandyLamportSnapshot import ChandyLamportComponentModel
+from Snapshot.Snapshot import SnapshotEventTypes
 
 # Wrap Snapshot in a node model!
 

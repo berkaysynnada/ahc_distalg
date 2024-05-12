@@ -7,7 +7,7 @@ from collections import defaultdict
 from adhoccomputing.Experimentation.Topology import Topology
 from adhoccomputing.GenericModel import GenericModel, GenericMessageHeader,  GenericMessage
 from adhoccomputing.Generics import *
-from Waves.Snapshot import SnapshotComponentModel, SnapshotMessageTypes, SnapshotEventTypes
+from Snapshot.Snapshot import SnapshotComponentModel, SnapshotMessageTypes, SnapshotEventTypes
 
 
 

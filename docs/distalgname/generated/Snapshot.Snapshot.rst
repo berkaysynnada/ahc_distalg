@@ -1,7 +1,7 @@
-﻿Waves.Waves
+﻿Snapshot.Snapshot
 =================
 
-.. automodule:: Waves.Waves
+.. automodule:: Snapshot.Snapshot
 
    
    
@@ -17,13 +17,13 @@
 
    .. autosummary::
    
-   .. autoclass::WavesComponentModel
+   .. autoclass:: SnapshotComponentModel
       :members:
       :undoc-members:
-   .. autoclass:: WavesEventTypes
+   .. autoclass:: SnapshotEventTypes
       :members:
       :undoc-members:
-   .. autoclass:: WavesMessageTypes
+   .. autoclass:: SnapshotMessageTypes
       :members:
       :undoc-members:
    

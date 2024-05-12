@@ -1,7 +1,7 @@
-﻿Waves.TraversalTarry
+﻿Snapshot.ChandyLamportSnapshot
 ==============================
 
-.. automodule:: Waves.TraversalTarry
+.. automodule:: Snapshot.ChandyLamportSnapshot
 
    
    
@@ -17,13 +17,13 @@
 
    .. autosummary::
    
-   .. autoclass:: TraversalTarryComponentModel
+   .. autoclass:: ChandyLamportComponentModel
       :members:
       :undoc-members:
-   .. autoclass:: TraversalTarryMessageTypes
+   .. autoclass:: ChandyLamportMessageTypes
       :members:
       :undoc-members:
-   .. autoclass:: TraversalTarryState
+   .. autoclass:: ChandyLamportState
       :members:
       :undoc-members:
    
