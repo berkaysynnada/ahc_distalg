@@ -1,7 +1,7 @@
-﻿Snapshot.LaiYangSnapshot
-========================
+﻿Waves.Waves
+===========
 
-.. automodule:: Snapshot.LaiYangSnapshot
+.. automodule:: Waves.Waves
 
    
    
@@ -17,10 +17,10 @@
 
    .. autosummary::
    
-   .. autoclass:: LaiYangComponentModel
+   .. autoclass:: WavesComponentModel
       :members:
       :undoc-members:
-   .. autoclass:: LaiYangState
+   .. autoclass:: WavesMessageTypes
       :members:
       :undoc-members:
    
