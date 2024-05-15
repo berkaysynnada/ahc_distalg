@@ -4,7 +4,7 @@ Introduction
 ============
 
 
-Distributed computing environments, characterized by multiple interconnected nodes, face the complex challenge of managing and coordinating these nodes efficiently. Among the myriad issues inherent in such systems, constructing a reliable and efficient spanning tree for communication and ensuring comprehensive traversal without redundancy are pivotal. These challenges form the crux of our investigation, focusing on the implementation and analysis of two pivotal algorithms: Tarry's Traversal Algorithm and the Tree Algorithm.
+Distributed computing environments, characterized by multiple interconnected nodes, face the complex challenge of managing and coordinating these nodes efficiently. Among the " issues inherent in such systems, constructing a reliable and efficient spanning tree for communication and ensuring comprehensive traversal without redundancy are pivotal. These challenges form the crux of our investigation, focusing on the implementation and analysis of two pivotal algorithms: Tarry's Traversal Algorithm and the Tree Algorithm.
 
 **The Problem**
 

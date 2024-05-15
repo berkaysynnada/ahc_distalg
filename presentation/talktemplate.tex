@@ -1,4 +1,4 @@
-\documentclass[11pt]{beamer}  % only frames
+\documentclass[11pt]{beamer}
 \usetheme{Warsaw}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -9,8 +9,8 @@
 \usepackage{amssymb}
 \usepackage{algorithm2e}
 
-\title[Distributed Algorithm on AHCv2]{Distributed Algorithm on AHCv2: Waves: Tarry's Traversal and Tree, Release V1.0.0}
-\author[Berkay Şahin]{Berkay Şahin\\}
+\title[Distributed Algorithm on AHCv2]{Distributed Algorithm on AHCv2: Waves: Tarry's Traversal and Tree Algorithms, Release V1.0.0}
+\author[Berkay Şahin]{Berkay Şahin}
 \date{\today}
 
 \begin{document}
@@ -25,77 +25,173 @@
 
 \section{Introduction}
 \begin{frame}{Introduction}
-    \textbf{Context:} Introduction to the challenges and importance of efficient traversal algorithms in distributed systems.
+    \textbf{Context:}
     \begin{itemize}
-        \item Importance of Tarry's Algorithm and Tree Algorithm in network exploration and rapid network setup.
-        \item Discussion on their theoretical implications and expected behaviors in different network topologies.
+        \item Introduction to the challenges and importance of efficient traversal algorithms in distributed systems.
+        \item Essential for managing complex networks involved in distributed systems.
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Problem Statement}
     \textbf{Problem Statement:}
     \begin{itemize}
-        \item In distributed systems, effective network traversal and spanning tree construction are crucial.
-        \item The primary challenge is to design protocols that minimize communication overhead and ensure completion.
+        \item The need for effective network traversal and spanning tree construction.
+        \item Importance of designing protocols that minimize communication overhead.
+        \item Ensuring completion even in dynamic network topologies.
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Significance and Necessity}
     \textbf{Significance and Necessity:}
     \begin{itemize}
-        \item These algorithms provide mechanisms for efficient data dissemination and network reconfiguration.
-        \item Solving this problem enables efficient resource management and fault diagnosis.
+        \item Why these algorithms are crucial for system robustness and performance.
+        \item Impact on efficient resource management and fault diagnosis.
+    \end{itemize}
+\end{frame}
+
+\section{Tarry's Algorithm}
+\begin{frame}{Overview of Tarry's Algorithm}
+    \textbf{Tarry's Traversal Algorithm:}
+    \begin{itemize}
+        \item Designed for undirected graphs.
+        \item Ensures every node is visited exactly once.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Principles and Mechanism}
+    \textbf{Principles and Mechanism:}
+    \begin{itemize}
+        \item Simple token-passing mechanism.
+        \item Each channel is visited twice to ensure completeness.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Pseudocode of Tarry's Algorithm}
+    \textbf{Pseudocode:}
+    \begin{algorithm}[H]
+    \SetAlgoLined
+    \If{node is initiator}{
+     send token to an arbitrary neighbor\;
+    }
+    \While{token is received from neighbor}{
+     mark self as visited\;
+     \eIf{there are unvisited neighbors}{
+      choose an unvisited neighbor and send the token\;
+     }{
+      return token to sender\;
+     }
+    }
+    \caption{Tarry's Algorithm}
+    \end{algorithm}
+\end{frame}
+
+\begin{frame}{Benefits and Evaluation}
+    \textbf{Benefits and Evaluation:}
+    \begin{itemize}
+        \item Ensures complete network coverage.
+        \item Minimizes message overhead by avoiding revisits.
+    \end{itemize}
+\end{frame}
+
+\section{Tree Algorithm}
+\begin{frame}{Overview of Tree Algorithm}
+    \textbf{Tree Algorithm:}
+    \begin{itemize}
+        \item Designed for acyclic networks.
+        \item Focuses on quick spanning tree formation.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Principles and Mechanism}
+    \textbf{Principles and Mechanism:}
+    \begin{itemize}
+        \item Waits for messages from all neighbors except one.
+        \item Decision making by exactly two nodes in the network.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Pseudocode of Tree Algorithm}
+    \textbf{Pseudocode:}
+    \begin{algorithm}[H]
+    \SetAlgoLined
+    \ForEach{node in network}{
+     Listen for messages from all neighbors except one\;
+     \If{messages received from all but one neighbor}{
+      Select the neighbor with no message as parent\;
+      Send message to selected parent\;
+     }
+     \If{message received from parent}{
+      Finalize decision\;
+     }
+    }
+    \caption{Tree Algorithm}
+    \end{algorithm}
+\end{frame}
+
+\begin{frame}{Benefits and Evaluation}
+    \textbf{Benefits and Evaluation:}
+    \begin{itemize}
+        \item Efficient message utilization.
+        \item Quick decision-making process.
     \end{itemize}
 \end{frame}
 
 \section{Implementation and Methodology}
-\begin{frame}{Implementation and Methodology}
+\begin{frame}{Simulation Setup}
     \textbf{Simulation Setup:}
     \begin{itemize}
         \item Description of the AHCv2 simulation environment.
-        \item Network topologies used: linear, tree, and random graphs.
-        \item Metrics captured: message count, traversal time, overhead.
+        \item Details on network topologies used: linear, tree, and random graphs.
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Methodological Approach}
     \textbf{Methodological Approach:}
     \begin{itemize}
-        \item Nodes initialized with either Tarry's or the Tree Algorithm.
-        \item Simulations to measure efficiency and coverage across network topologies.
+        \item Nodes initialized with specific algorithms.
+        \item Monitoring and capturing efficiency and coverage metrics.
     \end{itemize}
 \end{frame}
 
 \section{Results}
-\begin{frame}{Results}
+\begin{frame}{Theoretical Results}
     \textbf{Theoretical Results:}
     \begin{itemize}
-        \item Tarry's Algorithm is expected to use about 2E messages for complete traversal.
-        \item Tree Algorithm is designed for quick spanning tree formation but may incur higher message overhead.
-    \end{itemize}
-    \textbf{Expected Outcomes:}
-    \begin{itemize}
-        \item Comprehensive coverage by Tarry's Algorithm.
-        \item Rapid spanning tree formation by the Tree Algorithm.
+        \item Expected message usage and network traversal completeness for Tarry's Algorithm.
+        \item Speed and message overhead implications for the Tree Algorithm.
     \end{itemize}
 \end{frame}
 
 \section{Discussion}
-\begin{frame}{Discussion}
-    Discuss the implications of the findings:
+\begin{frame}{Implications of Findings}
+    \textbf{Implications of Findings:}
     \begin{itemize}
-        \item Suitability of Tarry’s Algorithm for comprehensive network exploration.
-        \item Tree Algorithm's application in scenarios requiring rapid deployment.
+        \item Suitability of Tarry's Algorithm for detailed network exploration.
+        \item Applicability of the Tree Algorithm for rapid deployment in structured networks.
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Practical Recommendations}
     \textbf{Practical Recommendations:}
     \begin{itemize}
-        \item Tarry's Algorithm for detailed network exploration.
-        \item Tree Algorithm for rapid setup in structured networks.
+        \item Application scenarios for each algorithm based on their strengths.
     \end{itemize}
 \end{frame}
 
 \section{Conclusion}
 \begin{frame}{Conclusion}
-    Summarize the theoretical insights and their practical implications:
+    \textbf{Summary of Findings:}
     \begin{itemize}
-        \item Both algorithms serve critical but distinct roles in distributed systems.
-        \item Future research directions, such as reducing overhead and adapting to dynamic network conditions.
+        \item Comparative analysis of Tarry's and the Tree Algorithms.
+        \item Future research directions for reducing overhead and improving adaptability.
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Final Thoughts}
     \textbf{Final Thoughts:}
     \begin{itemize}
-        \item Theoretical exploration highlights the need for empirical validation.
-        \item Importance of ongoing research in efficient traversal algorithms.
+        \item Necessity of empirical validation of theoretical predictions.
+        \item Importance of continued research in distributed systems traversal algorithms.
     \end{itemize}
 \end{frame}
 
@@ -105,8 +201,7 @@
 
 \begin{frame}{Questions}
     \centering \Large
-    Thank you!\\
-    Questions?
+    Thank you! Any questions?
 \end{frame}
 
 \end{document}

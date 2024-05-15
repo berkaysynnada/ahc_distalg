@@ -17,9 +17,7 @@
 
    .. autosummary::
    
-   .. autoclass:: TarryComponentModel
-      :members:
-      :undoc-members:
+      TarryComponentModel
    
    
 

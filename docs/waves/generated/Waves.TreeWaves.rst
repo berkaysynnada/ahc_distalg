@@ -17,9 +17,7 @@
 
    .. autosummary::
    
-   .. autoclass:: TreeComponentModel
-      :members:
-      :undoc-members:
+      TreeComponentModel
    
    
 
